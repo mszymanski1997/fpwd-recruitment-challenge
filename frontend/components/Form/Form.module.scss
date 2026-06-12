@@ -1,0 +1,161 @@
+$orange: #ff6b00;
+$orange-hover: #e05e00;
+$card-bg: #111111;
+$border-color: #222222;
+
+.transactionForm {
+	background-color: $card-bg;
+	border: 1px solid $border-color;
+	border-radius: 16px;
+	padding: 2.5rem;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	width: 50%;
+
+	h2 {
+		margin: 0;
+		font-size: 1.5rem;
+		color: #ffffff;
+		font-weight: 700;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.formGroup {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+
+		label {
+			font-size: 0.875rem;
+			color: #a3a3a3;
+			font-weight: 500;
+		}
+
+		.inputWrapper {
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			input {
+				width: 100%;
+				background-color: #1a1a1a;
+				border: 1px solid $border-color;
+				border-radius: 8px;
+				padding: 0.85rem 3rem 0.85rem 1rem;
+				color: #ffffff;
+				font-size: 1.125rem;
+				outline: none;
+				transition:
+					border-color 0.2s,
+					box-shadow 0.2s;
+
+				&:focus {
+					border-color: $orange;
+					box-shadow: 0 0 0 2px rgba($orange, 0.1);
+				}
+
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+				&[type='number'] {
+					appearance: textfield;
+				}
+			}
+
+			.inputCurrency {
+				position: absolute;
+				right: 1rem;
+				color: #666666;
+				font-weight: 700;
+				font-size: 0.875rem;
+			}
+		}
+	}
+
+	.submitBtn {
+		background-color: $orange;
+		color: #ffffff;
+		border: none;
+		border-radius: 8px;
+		padding: 0.85rem;
+		font-size: 1rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color 0.2s;
+
+		&:hover:not(:disabled) {
+			background-color: $orange-hover;
+		}
+
+		&:disabled {
+			background-color: #262626;
+			color: #737373;
+			cursor: not-allowed;
+		}
+	}
+
+	.resultBox {
+		margin-top: 0.5rem;
+		padding: 1.25rem;
+		background-color: rgba($orange, 0.03);
+		border: 1px dashed rgba($orange, 0.2);
+		border-radius: 8px;
+		animation: fadeIn 0.3s ease-in-out;
+
+		.resultTitle {
+			font-size: 0.75rem;
+			color: #a3a3a3;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			margin-bottom: 0.5rem;
+		}
+
+		.resultValues {
+			font-size: 1.25rem;
+			font-weight: 700;
+			color: #ffffff;
+
+			span {
+				color: $orange;
+			}
+		}
+
+		.resultMeta {
+			font-size: 0.75rem;
+			color: #525252;
+			margin-top: 0.5rem;
+		}
+	}
+
+	.errorText {
+		color: #ef4444;
+		font-size: 0.875rem;
+		text-align: center;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-5px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 768px) {
+	.transactionForm {
+		width: 80%;
+	}
+}

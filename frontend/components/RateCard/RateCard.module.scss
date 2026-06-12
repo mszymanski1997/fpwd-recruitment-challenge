@@ -1,3 +1,5 @@
+@import '../../src/app/mixins.scss';
+
 $orange: #ff6b00;
 $card-bg: #111111;
 $border-color: #222222;
@@ -57,12 +59,9 @@ $border-color: #222222;
 			margin-bottom: 0.25rem;
 		}
 
-		// Ten kontener przygotowujemy pod nasz komponent kliencki
 		.rateValueWrapper {
-			font-size: 3.5rem;
-			font-weight: 800;
 			color: #ffffff;
-			font-variant-numeric: tabular-nums; // Zapobiega skakaniu cyfr przy odświeżaniu
+			@include rate-display-text;
 		}
 	}
 
@@ -72,5 +71,11 @@ $border-color: #222222;
 		border-top: 1px solid $border-color;
 		padding-top: 1rem;
 		line-height: 1.4;
+	}
+}
+
+@media (max-width: 768px) {
+	.rateCard {
+		width: 80%;
 	}
 }

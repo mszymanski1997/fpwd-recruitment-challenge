@@ -3,7 +3,7 @@ $orange-dark: #e05e00;
 
 .header {
 	width: 100%;
-	border: 1px solid #262626;
+	border-bottom: 1px solid #262626;
 	background-color: rgba(10, 10, 10, 0.75);
 	backdrop-filter: blur(12px);
 	position: sticky;
@@ -24,6 +24,7 @@ $orange-dark: #e05e00;
 		display: flex;
 		align-items: center;
 		gap: 12px;
+		flex-shrink: 0;
 
 		.iconWrapper {
 			background-color: rgba($orange, 0.1);
@@ -48,12 +49,17 @@ $orange-dark: #e05e00;
 
 	.badgeSection {
 		.badge {
+			display: block;
 			font-size: 0.875rem;
 			font-weight: 500;
 			letter-spacing: 0.05em;
 			text-transform: uppercase;
 			color: #a3a3a3;
 			padding: 6px 12px;
+		}
+
+		@media (max-width: 640px) {
+			display: none;
 		}
 	}
 }

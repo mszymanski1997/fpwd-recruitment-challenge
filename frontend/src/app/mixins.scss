@@ -1,0 +1,13 @@
+@mixin rate-display-text {
+	font-size: 3.5rem;
+	font-weight: 800;
+	font-variant-numeric: tabular-nums;
+
+	@media (max-width: 640px) {
+		font-size: 1.8rem;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 1.3rem;
+	}
+}

@@ -1,8 +1,8 @@
+@import '../../src/app/mixins.scss';
+
 .rateValueWrapper {
-	font-size: 3.5rem;
-	font-weight: 800;
 	color: #ff6b00;
-	font-variant-numeric: tabular-nums;
+	@include rate-display-text;
 }
 
 .errorText {
@@ -18,4 +18,12 @@
 	color: #ffffff;
 	font-weight: 500;
 	margin-left: 0.25rem;
+
+	@media (max-width: 640px) {
+		font-size: 1.2rem;
+	}
+
+	@media (max-width: 400px) {
+		font-size: 0.8rem;
+	}
 }
