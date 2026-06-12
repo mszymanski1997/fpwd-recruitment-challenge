@@ -1,3 +1,9 @@
+import RateCard from '../../components/RateCard/RateCard';
+
 export default function Home() {
-	return <main></main>;
+	return (
+		<main>
+			<RateCard />
+		</main>
+	);
 }

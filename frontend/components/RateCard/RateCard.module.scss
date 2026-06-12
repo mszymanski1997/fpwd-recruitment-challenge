@@ -1,0 +1,76 @@
+$orange: #ff6b00;
+$card-bg: #111111;
+$border-color: #222222;
+
+.rateCard {
+	background-color: $card-bg;
+	border: 1px solid $border-color;
+	border-radius: 16px;
+	padding: 2.5rem;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	width: 50%;
+
+	.badgeRow {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.liveBadge {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 0.75rem;
+			color: $orange;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 0.05em;
+
+			span {
+				width: 8px;
+				height: 8px;
+				background-color: $orange;
+				border-radius: 50%;
+				box-shadow: 0 0 10px $orange;
+			}
+		}
+	}
+
+	.content {
+		margin: 1rem 0;
+
+		.title {
+			font-size: 1.125rem;
+			color: #a3a3a3;
+			margin: 0 0 0.75rem 0;
+			font-weight: 400;
+		}
+
+		.currencyPair {
+			font-size: 0.875rem;
+			color: #666666;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			margin-bottom: 0.25rem;
+		}
+
+		// Ten kontener przygotowujemy pod nasz komponent kliencki
+		.rateValueWrapper {
+			font-size: 3.5rem;
+			font-weight: 800;
+			color: #ffffff;
+			font-variant-numeric: tabular-nums; // Zapobiega skakaniu cyfr przy odświeżaniu
+		}
+	}
+
+	.footerInfo {
+		font-size: 0.815rem;
+		color: #525252;
+		border-top: 1px solid $border-color;
+		padding-top: 1rem;
+		line-height: 1.4;
+	}
+}
