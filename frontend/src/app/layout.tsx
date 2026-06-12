@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'Exchange App',
+	title: 'CurrenX',
 	description: 'Recruitment challenge',
 };
 

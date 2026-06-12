@@ -10,7 +10,7 @@ export default function Header() {
 						<ArrowLeftRight size={24} color='#ff6b00' />
 					</div>
 					<span className={styles.logoText}>
-						Crypto<span>X</span>
+						Curren<span>X</span>
 					</span>
 				</div>
 
