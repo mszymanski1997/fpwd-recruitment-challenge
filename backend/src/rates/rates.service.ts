@@ -6,7 +6,21 @@ export type ExchangeRateResponse = {
 
 @Injectable()
 export class RatesService {
+  private cachedRate: ExchangeRateResponse | null = null;
+  private lastFetched: number | null = null;
+  private readonly CACHE_TTL = 60000;
+
   async getRate() {
+    const now = Date.now();
+
+    if (
+      this.cachedRate &&
+      this.lastFetched &&
+      now - this.lastFetched < this.CACHE_TTL
+    ) {
+      return this.cachedRate;
+    }
+
     if (!process.env.DUMMY_API_KEY || !process.env.DUMMY_API_URL) {
       throw new Error('Missing environment variables in .env file');
     }
@@ -24,6 +38,10 @@ export class RatesService {
     }
 
     const rate = (await response.json()) as ExchangeRateResponse;
+
+    this.cachedRate = rate;
+    this.lastFetched = now;
+
     return rate;
   }
 }
