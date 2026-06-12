@@ -16,7 +16,7 @@ I wrote this as a recruitment task, focusing on keeping the code clean, modular,
 
 ---
 
-## 🛠️ Tech Stack
+## ⚡ Tech Stack
 
 - **Frontend:** Next.js (App Router), TypeScript, SCSS Modules, Lucide Icons
 - **Backend:** NestJS, TypeScript, Built-in Caching Mechanism
@@ -30,7 +30,10 @@ Follow these simple steps to clone the repository and get the app spinning on yo
 ### 1. Clone the Repo
 
 First, clone the project to your local directory:
-git clone https://github.com/mszymanski1997/fpwd-recruitment-challenge.git
+
+```git clone https://github.com/mszymanski1997/fpwd-recruitment-challenge.git```
+
+---
 
 ### 2.Configure Environment Variables (.env)
 
@@ -40,24 +43,28 @@ Navigate to the backend folder.
 Create a new file named .env.
 Paste the following variables and add your actual API details:
 
-API_URL=[YOUR_API_URL]
-API_KEY=[YOUR_API_KEY]
+- API_URL=[YOUR_API_URL]
+- API_KEY=[YOUR_API_KEY]
+
+---
 
 ### 3.Backend Setup (NestJS)
 
 Open your terminal and run the following commands to install dependencies and start the backend API server:
-cd backend
-npm install
-npm run start
+- cd backend
+- npm install
+- npm run start
 
-The server will boot up and listen for requests on http://localhost:3001.
+The server will boot up and listen for requests on ```http://localhost:3001.```
+
+---
 
 ### 4. Frontend Setup (Next.js)
 
 Open a second terminal window (keep the backend terminal running!) and run these commands to launch the client application:
 
-cd frontend
-npm install
-npm run dev
+- cd frontend
+- npm install
+- npm run dev
 
-Now, open your favorite browser and go to http://localhost:3000. You're all set!
+Now, open your favorite browser and go to ```http://localhost:3000```. You're all set!
