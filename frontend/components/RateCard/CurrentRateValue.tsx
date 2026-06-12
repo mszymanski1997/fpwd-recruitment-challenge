@@ -26,6 +26,10 @@ const CurrentRateValue = () => {
 		};
 
 		fetchRate();
+
+		const interval = setInterval(fetchRate, 30000);
+
+		return () => clearInterval(interval);
 	}, []);
 
 	if (error) return <span className={styles.errorText}>Fetch error</span>;
